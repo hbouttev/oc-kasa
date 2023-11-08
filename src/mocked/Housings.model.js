@@ -14,5 +14,6 @@ export async function getHousings() {
  * @returns {Promise<*>}
  */
 export async function getHousing(id) {
-    return housings.find((housing) => housing.id === id);
+    const housing = housings.find((housing) => housing.id === id);
+    return housing ?? null;
 }
