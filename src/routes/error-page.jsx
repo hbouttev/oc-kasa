@@ -3,7 +3,7 @@ import { useRouteError } from 'react-router-dom';
 // Will always throw a 404 Response to be caught by the ErrorPage in the
 // nearest parent route.
 export async function loader() {
-  throw new Response('Not Found', { status: 404 });
+  throw new Response('', { status: 404, statusText: 'Not Found' });
 }
 
 export default function ErrorPage() {

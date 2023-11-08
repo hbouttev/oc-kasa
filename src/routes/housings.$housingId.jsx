@@ -4,7 +4,7 @@ import { getHousing } from '../mocked/Housings.model.js';
 export async function loader({ params }) {
   const housing = await getHousing(params.housingId);
   if (!housing) {
-    throw new Response('Not Found', { status: 404 });
+    throw new Response('', { status: 404, statusText: 'Not Found' });
   }
   return { housing };
 }
