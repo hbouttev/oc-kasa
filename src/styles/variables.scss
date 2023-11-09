@@ -1,0 +1,16 @@
+$colour-primary: #FF6060;
+$colour-secondary: #FFF;
+$colour-white: #FFF;
+$colour-background-light: #F6F6F6;
+$colour-background-dark: #000;
+
+$max-menu-items-in-category: 4;
+
+$desktop-max-width: 1240px;
+
+$breakpoints: (
+        'sm' : 600px,
+        'md' : 800px,
+        'lg' : 1000px,
+        'desktop-content' : $desktop-max-width
+);
