@@ -1,24 +1,23 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import kasaLogo from '../assets/kasa-logo-red.svg';
+import styles from './Header.module.scss';
 
 export default function Header() {
+  const navLinkClasses = ({ isActive, isPending }) =>
+    `${styles.navLink} ${
+      isActive ? styles.active : isPending ? styles.pending : ''
+    }`;
+
   return (
-    <div>
-      <h1> KASA </h1>
+    <div className={styles.headerContainer}>
+      <img src={kasaLogo} alt="Kasa logo" height={68} />
       <nav>
-        <ul>
-          <li>
-            <Link to={`/`}>Home</Link>
-          </li>
-          <li>
-            <Link to={`about`}>About</Link>
-          </li>
-          <li>
-            <Link to={`housings/33`}>Logement 33</Link>
-          </li>
-          <li>
-            <Link to={`truc`}>404</Link>
-          </li>
-        </ul>
+        <NavLink to={`/`} className={navLinkClasses}>
+          Accueil
+        </NavLink>
+        <NavLink to={`about`} className={navLinkClasses}>
+          A Propos
+        </NavLink>
       </nav>
     </div>
   );

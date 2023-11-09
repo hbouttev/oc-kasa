@@ -1,0 +1,23 @@
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 0;
+  height: 68px;
+}
+
+.navLink {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: $colour-primary;
+  margin-left: 4rem;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.active, .pending {
+  text-decoration: underline;
+}
