@@ -1,12 +1,14 @@
+import heroImage from "../assets/hero2.png";
+import Hero from "../components/Hero";
+
 export default function About() {
   return (
-    <div>
-      <h2>About</h2>
-      <p>Lorem ipsum dolor sit amet.</p>
-      <p>
+    <>
+      <Hero imageUrl={heroImage} />
+      <div>
         Quisquam voluptatum, quibusdam, quia, quae voluptates voluptatem quod
         voluptatibus quos doloribus quidem voluptate.
-      </p>
-    </div>
+      </div>
+    </>
   );
 }
