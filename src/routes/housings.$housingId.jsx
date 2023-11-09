@@ -1,5 +1,5 @@
 import { useLoaderData } from 'react-router-dom';
-import { getHousing } from '../mocked/Housings.model.js';
+import { getHousing } from '../mocked/Housings.model';
 
 export async function loader({ params }) {
   const housing = await getHousing(params.housingId);
