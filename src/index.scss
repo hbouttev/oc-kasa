@@ -33,3 +33,10 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+/* Footer stick at the bottom of the page */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
