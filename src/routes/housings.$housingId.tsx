@@ -1,10 +1,14 @@
 import { useLoaderData } from 'react-router-dom';
 import type { LoaderFunctionArgs } from 'react-router-dom';
 import type { LoaderData } from '../types/react-router';
-import { getHousing } from '../mocked/Housings.model';
+import type { Housing } from '../types/kasa.ts';
 
-export async function loader({ params }: LoaderFunctionArgs) {
-  const housing = await getHousing(params.housingId as string);
+export async function loader({ request, params }: LoaderFunctionArgs) {
+  const res = await fetch(`/logements.json`, {
+    signal: request.signal,
+  });
+  const housings: Housing[] = await res.json();
+  const housing = housings.find((housing) => housing.id === params.housingId);
   if (!housing) {
     throw new Response('', { status: 404, statusText: 'Not Found' });
   }

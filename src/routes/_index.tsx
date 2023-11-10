@@ -1,12 +1,15 @@
 import { useLoaderData } from 'react-router-dom';
+import type { LoaderFunctionArgs } from 'react-router-dom';
 import type { LoaderData } from '../types/react-router';
-import { getHousings } from '../mocked/Housings.model';
+import type { Housing } from '../types/kasa.ts';
 import heroImage from '../assets/hero1.png';
 import Hero from '../components/Hero';
 
-export async function loader() {
-  const housings = await getHousings();
-  console.log('loader: ', housings);
+export async function loader({ request }: LoaderFunctionArgs) {
+  const res = await fetch(`/logements.json`, {
+    signal: request.signal,
+  });
+  const housings: Housing[] = await res.json();
   return { housings };
 }
 
