@@ -4,6 +4,7 @@ import type { LoaderData } from '../types/react-router';
 import type { Housing } from '../types/kasa.ts';
 import heroImage from '../assets/hero1.png';
 import Hero from '../components/Hero';
+import HousingCard from '../components/HousingCard';
 
 export async function loader({ request }: LoaderFunctionArgs) {
   const res = await fetch(`/logements.json`, {
@@ -24,13 +25,7 @@ export default function HomePage() {
       >
         Chez vous, partout et ailleurs
       </Hero>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-        voluptatum, quibusdam, quia, quae voluptates voluptatem quod
-        voluptatibus quos doloribus quidem voluptate. Quisquam, quibusdam, quia,
-        quae voluptates voluptatem quod voluptatibus quos doloribus quidem
-        voluptate.
-      </p>
+      <HousingCard housing={housings[0]} />
       <pre>{JSON.stringify(housings, null, 2)}</pre>
     </div>
   );
