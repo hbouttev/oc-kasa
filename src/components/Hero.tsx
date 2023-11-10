@@ -1,10 +1,10 @@
-import React from "react";
+import type { ReactNode } from 'react';
 import styles from './Hero.module.scss';
 
 interface HeroProps {
   imageUrl: string;
   imageAlt: string;
-  children?: React.ReactNode;
+  children?: ReactNode;
 }
 
 export default function Hero({ imageUrl, imageAlt, children }: HeroProps) {
