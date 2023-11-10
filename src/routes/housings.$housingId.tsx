@@ -1,16 +1,18 @@
 import { useLoaderData } from 'react-router-dom';
+import type { LoaderFunctionArgs } from 'react-router-dom';
+import type { LoaderData } from '../types/react-router';
 import { getHousing } from '../mocked/Housings.model';
 
-export async function loader({ params }) {
-  const housing = await getHousing(params.housingId);
+export async function loader({ params }: LoaderFunctionArgs) {
+  const housing = await getHousing(params.housingId as string);
   if (!housing) {
     throw new Response('', { status: 404, statusText: 'Not Found' });
   }
   return { housing };
 }
 
-export default function Housing() {
-  const { housing } = useLoaderData();
+export default function HousingPage() {
+  const { housing } = useLoaderData() as LoaderData<typeof loader>;
   return (
     <div>
       <h2>Housing</h2>

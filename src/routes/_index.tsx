@@ -1,4 +1,5 @@
 import { useLoaderData } from 'react-router-dom';
+import type { LoaderData } from '../types/react-router';
 import { getHousings } from '../mocked/Housings.model';
 import heroImage from '../assets/hero1.png';
 import Hero from '../components/Hero';
@@ -9,8 +10,8 @@ export async function loader() {
   return { housings };
 }
 
-export default function Home() {
-  const { housings } = useLoaderData();
+export default function HomePage() {
+  const { housings } = useLoaderData() as LoaderData<typeof loader>;
   console.log('Home: ', housings);
   return (
     <div>

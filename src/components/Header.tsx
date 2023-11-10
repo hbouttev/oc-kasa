@@ -3,7 +3,13 @@ import kasaLogo from '../assets/kasa-logo-red.svg';
 import styles from './Header.module.scss';
 
 export default function Header() {
-  const navLinkClasses = ({ isActive, isPending }) =>
+  const navLinkClasses = ({
+    isActive,
+    isPending,
+  }: {
+    isActive: boolean;
+    isPending: boolean;
+  }) =>
     `${styles.navLink} ${
       isActive ? styles.active : isPending ? styles.pending : ''
     }`;

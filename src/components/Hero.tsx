@@ -1,6 +1,13 @@
+import React from "react";
 import styles from './Hero.module.scss';
 
-export default function Hero({ imageUrl, imageAlt, children }) {
+interface HeroProps {
+  imageUrl: string;
+  imageAlt: string;
+  children?: React.ReactNode;
+}
+
+export default function Hero({ imageUrl, imageAlt, children }: HeroProps) {
   return (
     <div className={styles.heroContainer}>
       <img
