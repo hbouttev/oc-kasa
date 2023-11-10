@@ -8,7 +8,7 @@ import ErrorPage, { loader as errorLoader } from './routes/error-page';
 import HomePage, { loader as homeLoader } from './routes/_index';
 import HousingPage, {
   loader as housingLoader,
-} from './routes/housings.$housingId.jsx';
+} from './routes/housings.$housingId';
 import AboutPage from './routes/about';
 
 const router = createBrowserRouter([
