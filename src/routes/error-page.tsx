@@ -1,4 +1,5 @@
 import { isRouteErrorResponse, Link, useRouteError } from 'react-router-dom';
+import style from './error-page.module.scss';
 
 // Will always throw a 404 Response to be caught by the ErrorPage in the
 // nearest parent route.
@@ -16,19 +17,26 @@ export default function ErrorPage() {
     }
 
     return (
-      <div>
-        <h1>{error.status}</h1>
-        <p>{errorText}</p>
-        <Link to="/">Retourner sur la page d'accueil</Link>
+      <div className={style.pageContainer}>
+        <h1 className={style.statusCode}>{error.status}</h1>
+        <p className={style.errorText}>{errorText}</p>
+        <Link to="/" className={style.navigateLink}>
+          Retourner sur la page d'accueil
+        </Link>
       </div>
     );
   } else {
     console.error(error);
 
     return (
-      <div>
-        <h1>Oups !</h1>
-        <p>Désolé, une erreur imprévue s'est produite.</p>
+      <div className={style.pageContainer}>
+        <h1 className={style.statusCode}>Oups !</h1>
+        <p className={style.errorText}>
+          Désolé, une erreur imprévue s'est produite.
+        </p>
+        <Link to="/" className={style.navigateLink}>
+          Retourner sur la page d'accueil
+        </Link>
       </div>
     );
   }
