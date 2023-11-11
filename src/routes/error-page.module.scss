@@ -1,34 +1,34 @@
 .pageContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
 
 .statusCode {
-    font-size: 18rem;
-    font-weight: 700;
-    color: $colour-primary;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+  font-size: 18rem;
+  font-weight: 700;
+  color: $colour-primary;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .errorText {
-    font-size: 2.25rem;
-    font-weight: 500;
-    color: $colour-primary;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+  font-size: 2.25rem;
+  font-weight: 500;
+  color: $colour-primary;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .navigateLink {
-    font-size: 1.125rem;
-    font-weight: 500;
-    color: $colour-primary;
-    margin: 6rem 0;
-    padding: 0;
-    text-align: center;
-    text-decoration: underline;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: $colour-primary;
+  margin: 6rem 0;
+  padding: 0;
+  text-align: center;
+  text-decoration: underline;
 }
