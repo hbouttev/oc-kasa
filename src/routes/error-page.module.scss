@@ -3,6 +3,9 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  @media screen and (max-width: map-get($breakpoints, sm)) {
+    gap: 4rem;
+  }
 }
 
 .statusCode {
@@ -12,6 +15,10 @@
   margin: 0;
   padding: 0;
   text-align: center;
+  @media screen and (max-width: map-get($breakpoints, sm)) {
+    font-size: 6rem;
+    margin: 2rem 0 0;
+  }
 }
 
 .errorText {
@@ -21,6 +28,9 @@
   margin: 0;
   padding: 0;
   text-align: center;
+  @media screen and (max-width: map-get($breakpoints, sm)) {
+    font-size: 1.125rem;
+  }
 }
 
 .navigateLink {
@@ -31,4 +41,8 @@
   padding: 0;
   text-align: center;
   text-decoration: underline;
+  @media screen and (max-width: map-get($breakpoints, sm)) {
+    font-size: 0.875rem;
+    margin: 3rem 0;
+  }
 }
