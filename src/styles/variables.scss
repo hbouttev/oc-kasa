@@ -3,13 +3,11 @@ $colour-secondary: #FFF;
 $colour-background-light: #F6F6F6;
 $colour-background-dark: #000;
 
-$max-menu-items-in-category: 4;
-
 $desktop-max-width: 1440px;
 
 $breakpoints: (
         'sm' : 600px,
-        'md' : 800px,
-        'lg' : 1000px,
+        'md' : 900px,
+        'lg' : 1200px,
         'desktop-content' : $desktop-max-width
 );
