@@ -15,7 +15,7 @@ export default function Header() {
     }`;
 
   return (
-    <div className={styles.headerContainer}>
+    <header className={styles.headerContainer}>
       <img src={kasaLogo} alt="Kasa logo" height={68} />
       <nav>
         <NavLink to={`/`} className={navLinkClasses}>
@@ -25,6 +25,6 @@ export default function Header() {
           A Propos
         </NavLink>
       </nav>
-    </div>
+    </header>
   );
 }
