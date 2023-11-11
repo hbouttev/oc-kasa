@@ -1,0 +1,37 @@
+.housingsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3.125rem;
+  margin: 2.75rem 0 0;
+  width: 100%;
+  padding: 3.5rem 3.125rem;
+  background-color: $colour-background-light;
+  border-radius: 25px;
+  @media screen and (max-width: map-get($breakpoints, lg)) {
+    grid-template-columns: repeat(2, 1fr)
+  }
+  @media screen and (max-width: map-get($breakpoints, md)) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  @media screen and (max-width: map-get($breakpoints, sm)) {
+    padding: 0;
+    background-color: unset;
+    grid-gap: 1.25rem;
+  }
+}
+
+.housingCard {
+  height: 340px;
+  width: 100%;
+  @media screen and (max-width: map-get($breakpoints, md)) {
+    height: 255px;
+    width: 100%;
+  }
+}
+
+.mobileOnly {
+  display: none;
+  @media screen and (max-width: map-get($breakpoints, md)) {
+    display: inline-block;
+  }
+}
