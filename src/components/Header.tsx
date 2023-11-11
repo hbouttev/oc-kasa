@@ -16,7 +16,7 @@ export default function Header() {
 
   return (
     <header className={styles.headerContainer}>
-      <img src={kasaLogo} alt="Kasa logo" height={68} />
+      <img src={kasaLogo} alt="Kasa logo" height="100%" />
       <nav>
         <NavLink to={`/`} className={navLinkClasses}>
           Accueil

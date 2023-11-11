@@ -4,6 +4,10 @@
   align-items: center;
   margin: 3rem 0;
   height: 68px;
+  @media screen and (max-width: map-get($breakpoints, sm)) {
+    height: 48px;
+    margin: 1.25rem 0 1.7rem;
+  }
 }
 
 .navLink {
@@ -12,6 +16,11 @@
   color: $colour-primary;
   margin-left: 4rem;
   text-decoration: none;
+  @media screen and (max-width: map-get($breakpoints, sm)) {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    margin-left: 1.62rem;
+  }
 
   &:hover {
     text-decoration: underline;
