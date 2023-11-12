@@ -1,4 +1,4 @@
-import heroImage from '../assets/hero2.png';
+import heroImage from '../assets/images/hero2.png';
 import Hero from '../components/Hero';
 
 export default function AboutPage() {

@@ -2,7 +2,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 import type { LoaderFunctionArgs } from 'react-router-dom';
 import type { LoaderData } from '../types/react-router';
 import type { Housing } from '../types/kasa.ts';
-import heroImage from '../assets/hero1.png';
+import heroImage from '../assets/images/hero1.png';
 import Hero from '../components/Hero';
 import HousingCard from '../components/HousingCard';
 import styles from './_index.module.scss';
