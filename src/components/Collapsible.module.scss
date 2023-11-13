@@ -1,0 +1,68 @@
+.collapsibleContainer {
+  width: 100%;
+  border-radius: 10px;
+  background-color: $colour-background-light;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0.625rem 1rem 0.625rem;
+  width: 100%;
+  background-color: $colour-primary;
+  border-radius: 10px;
+
+  &Medium {
+    padding: 0.625rem 1.25rem 0.625rem 0.625rem;
+  }
+
+  @media screen and (max-width: map-get($breakpoints, sm)) {
+    padding: 0.625rem;
+  }
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: $colour-secondary;
+  margin: 0;
+  padding: 0;
+
+  &Medium {
+    font-size: 1.125rem;
+  }
+
+  @media screen and (max-width: map-get($breakpoints, sm)) {
+    font-size: 0.8125rem;
+  }
+}
+
+.collapseButton {
+  font-size: 1.5rem;
+  color: $colour-secondary;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 28px;
+  width: 28px;
+
+  @media screen and (max-width: map-get($breakpoints, sm)) {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+.collapseContainer {
+  overflow: hidden;
+  transition: height 0.4s ease-in-out;
+}
+
+.contentContainer {
+  padding: 1rem;
+}
