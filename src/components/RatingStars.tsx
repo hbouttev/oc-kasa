@@ -15,9 +15,7 @@ export default function RatingStars({ rating }: RatingStarsProps) {
       (_, i) => rating + 1 + i
     );
   }
-  console.log('rating: ', rating);
-  console.log('activeStars: ', activeStars);
-  console.log('inactiveStars: ', inactiveStars);
+
   return (
     <div className={styles.starsContainer}>
       {activeStars.map((star) => (
