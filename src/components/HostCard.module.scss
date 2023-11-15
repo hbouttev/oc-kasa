@@ -1,0 +1,30 @@
+.hostCard {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.name {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 0;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: map-get($breakpoints, sm)) {
+    font-size: 0.75rem;
+  }
+}
+
+.picture {
+  height: 64px;
+  width: 64px;
+  object-fit: cover;
+  border-radius: 50%;
+
+  @media screen and (max-width: map-get($breakpoints, sm)) {
+    height: 32px;
+    width: 32px;
+  }
+}
