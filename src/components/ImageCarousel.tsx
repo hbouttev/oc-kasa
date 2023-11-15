@@ -34,21 +34,25 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
         height="100%"
         width="100%"
       />
-      <button
-        className={`${styles.controls} ${styles.controlsPrevious}`}
-        onClick={handlePrevious}
-      >
-        <ArrowBack className={styles.controlsIcon} />
-      </button>
-      <button
-        className={`${styles.controls} ${styles.controlsNext}`}
-        onClick={handleNext}
-      >
-        <ArrowForward className={styles.controlsIcon} />
-      </button>
-      <p className={styles.indicator}>
-        {currentIndex + 1} / {images.length}
-      </p>
+      {images.length > 1 && (
+        <>
+          <button
+            className={`${styles.controls} ${styles.controlsPrevious}`}
+            onClick={handlePrevious}
+          >
+            <ArrowBack className={styles.controlsIcon} />
+          </button>
+          <button
+            className={`${styles.controls} ${styles.controlsNext}`}
+            onClick={handleNext}
+          >
+            <ArrowForward className={styles.controlsIcon} />
+          </button>
+          <p className={styles.indicator}>
+            {currentIndex + 1} / {images.length}
+          </p>
+        </>
+      )}
     </div>
   );
 }
