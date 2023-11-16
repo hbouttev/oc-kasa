@@ -1,6 +1,10 @@
 .carouselContainer {
   width: 100%;
   height: 415px;
+
+  @media screen and (max-width: map-get($breakpoints, sm)) {
+    height: 255px;
+  }
 }
 
 .headerContainer {
@@ -9,6 +13,12 @@
   align-items: flex-start;
   gap: 2rem;
   margin-top: 2rem;
+
+  @media screen and (max-width: map-get($breakpoints, md)) {
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
 }
 
 .headerOverview {
@@ -22,12 +32,24 @@
   font-weight: 500;
   margin: 0;
   line-height: 1.4;
+
+  @media screen and (max-width: map-get($breakpoints, md)) {
+    font-size: 1.75rem;
+  }
+
+  @media screen and (max-width: map-get($breakpoints, sm)) {
+    font-size: 1.125rem;
+  }
 }
 
 .location {
   font-size: 1.125rem;
   font-weight: 500;
   margin: 0;
+
+  @media screen and (max-width: map-get($breakpoints, sm)) {
+    font-size: 0.875rem;
+  }
 }
 
 .tags {
@@ -43,11 +65,23 @@
   flex-direction: column;
   align-items: flex-end;
   gap: 1.25rem;
+
+  @media screen and (max-width: map-get($breakpoints, md)) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
 }
 
 .detailsContainer {
   display: flex;
   justify-content: space-between;
-  gap: 4.75rem;
+  gap: 6%;
   margin-top: 1.5rem;
+
+  @media screen and (max-width: map-get($breakpoints, md)) {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
 }
