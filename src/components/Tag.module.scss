@@ -9,7 +9,7 @@
   padding: 0 1.375rem;
   color: $colour-secondary;
 
-  @media screen and (max-width: map-get($breakpoints, md)) {
+  @media screen and (max-width: map-get($breakpoints, sm)) {
     height: 18px;
     font-size: 0.625rem;
   }
