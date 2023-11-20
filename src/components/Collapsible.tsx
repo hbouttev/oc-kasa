@@ -14,6 +14,7 @@ export default function Collapsible({
   title,
   titleTagName = 'span',
   size = 'large',
+  contentDelayedAnimation = false,
   children,
 }: CollapsibleProps) {
   const [open, setOpen] = useState<boolean>(false);
@@ -45,7 +46,9 @@ export default function Collapsible({
           {title}
         </TitleTag>
         <button
-          className={styles.collapseButton}
+          className={`${styles.collapseButton} ${
+            open ? styles.collapseButtonOpen : ''
+          }`.trim()}
           onClick={() => setOpen((prev) => !prev)}
         >
           <IconChevronDown />
@@ -55,7 +58,16 @@ export default function Collapsible({
         className={styles.collapseContainer}
         style={{ height: contentHeight }}
       >
-        <div className={styles.contentContainer} ref={contentElRef}>
+        <div
+          className={`${styles.contentContainer} ${
+            open ? styles.contentContainerOpen : ''
+          } ${
+            open && contentDelayedAnimation
+              ? styles.contentContainerDelayed
+              : ''
+          }`.trim()}
+          ref={contentElRef}
+        >
           {children}
         </div>
       </div>
