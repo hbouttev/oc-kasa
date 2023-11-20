@@ -6,6 +6,10 @@
   background: $colour-background-dark;
   padding: 4rem 0 2rem;
   margin-top: 3rem;
+
+  @media screen and (max-width: map-get($breakpoints, sm)) {
+    gap: 15px;
+  }
 }
 
 .copyright {
@@ -13,4 +17,10 @@
   font-size: 1.5rem;
   font-weight: 500;
   margin: 0;
+  text-align: center;
+
+  @media screen and (max-width: map-get($breakpoints, sm)) {
+    font-size: 0.75rem;
+    max-width: 130px;
+  }
 }
